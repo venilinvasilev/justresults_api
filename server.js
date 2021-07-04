@@ -16,7 +16,7 @@ mongoose.connect(DB, {
     console.log('DB connection successfully established');
 }).catch(err => console.log(err));
 
-const server = app.listen(8000, () => {
+const server = app.listen(process.env.PORT, () => {
     console.log(`Starting JustResults Api in ${process.env.NODE_ENV} mode`);
     console.log(`Server running on port ${process.env.PORT}`);
 });
